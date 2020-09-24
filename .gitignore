@@ -41,6 +41,21 @@ buck-out/
 *.keystore
 !debug.keystore
 
+# Root dir shouldn't have Xcode project
+/*.xcodeproj
+
+# ReactCommon subdir shouldn't have Xcode project
+/ReactCommon/**/*.xcodeproj
+/packages/rn-tester/build
+/packages/rn-tester/android/app/build/*
+
+# Libs that shouldn't have Xcode project
+/Libraries/FBLazyVector/**/*.xcodeproj
+/Libraries/FBReactNativeSpec/**/*.xcodeproj
+/Libraries/RCTRequired/**/*.xcodeproj
+/React/CoreModules/**/*.xcodeproj
+/packages/react-native-codegen/**/*.xcodeproj
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
@@ -57,3 +72,6 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# Android memory profiler files
+*.hprof
